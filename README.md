@@ -1,5 +1,7 @@
 # rsexile
 
+[![CI/CD](https://github.com/jyablonski/rsexile/actions/workflows/ci_cd.yaml/badge.svg)](https://github.com/jyablonski/rsexile/actions/workflows/ci_cd.yaml)
+
 A Path of Exile 2 in-game campaign-guide overlay for Linux and Windows. As you play, rsexile follows your zone transitions and shows what to do, what to skip, and what rewards to look for in the current zone.
 
 ## What it does
