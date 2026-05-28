@@ -1,0 +1,266 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*.*.*"]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  RUST_TOOLCHAIN: stable
+
+jobs:
+  fmt:
+    name: Rustfmt
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+
+  clippy:
+    name: Clippy (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Linux build deps
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxkbcommon-dev libxcb1-dev \
+            libgl1-mesa-dev libwayland-dev pkg-config
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Run Clippy
+        run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+
+  check:
+    name: Cargo check (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Linux build deps
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxkbcommon-dev libxcb1-dev \
+            libgl1-mesa-dev libwayland-dev pkg-config
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Check build
+        run: cargo check --workspace --all-targets --all-features --locked
+
+  test:
+    name: Rust tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Linux build deps
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxkbcommon-dev libxcb1-dev \
+            libgl1-mesa-dev libwayland-dev pkg-config
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Run test suite
+        run: cargo test --workspace --all-features --locked
+
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Linux build deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxkbcommon-dev libxcb1-dev \
+            libgl1-mesa-dev libwayland-dev pkg-config
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: llvm-tools-preview
+
+      - name: Install cargo-llvm-cov
+        uses: taiki-e/install-action@cargo-llvm-cov
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Generate lcov coverage
+        run: cargo llvm-cov --workspace --all-features --locked --lcov --output-path lcov.info
+
+      - name: Print summary
+        run: cargo llvm-cov report --summary-only
+
+      - name: Upload lcov artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lcov-coverage
+          path: lcov.info
+          retention-days: 14
+
+  # Single check that branch protection can require; fans in from the
+  # individual jobs above so we don't have to keep the required-checks list
+  # in sync with each job name.
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    # Coverage runs alongside but is not gating — it is the flakiest job
+    # (network installs, LLVM tooling) and we do not want a transient
+    # coverage failure to block merges.
+    needs: [fmt, clippy, check, test]
+    if: always()
+    steps:
+      - name: All required jobs passed
+        run: |
+          if [[ "${{ needs.fmt.result }}" != "success" \
+             || "${{ needs.clippy.result }}" != "success" \
+             || "${{ needs.check.result }}" != "success" \
+             || "${{ needs.test.result }}" != "success" ]]; then
+            echo "One or more required CI jobs failed"
+            exit 1
+          fi
+
+  # On a tag push, fail fast if the binary's compiled-in version
+  # (Cargo.toml -> CARGO_PKG_VERSION) doesn't match the tag. Shipping a
+  # `vX.Y.Z` release containing a binary that reports a different version
+  # would break `self-update`'s version comparison (it would re-download
+  # forever), so block the release entirely instead.
+  version-guard:
+    name: Version guard
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Verify tag matches Cargo.toml version
+        run: |
+          cargo_ver="$(grep -m1 '^version' Cargo.toml | sed -E 's/.*"(.*)".*/\1/')"
+          tag_ver="${GITHUB_REF_NAME#v}"
+          echo "Cargo.toml version: $cargo_ver"
+          echo "Tag version:        $tag_ver"
+          if [[ "$cargo_ver" != "$tag_ver" ]]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match Cargo.toml version $cargo_ver. Bump Cargo.toml (and Cargo.lock) to match the tag."
+            exit 1
+          fi
+
+  release:
+    name: Release (${{ matrix.target }})
+    needs: [ci, version-guard]
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ${{ matrix.runner }}
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        include:
+          - target: x86_64-unknown-linux-gnu
+            runner: ubuntu-22.04 # older glibc (2.35) for broader Linux compat
+            asset: rsexile-x86_64-unknown-linux-gnu
+            archive: tar.gz
+          - target: x86_64-pc-windows-msvc
+            runner: windows-latest
+            asset: rsexile-x86_64-pc-windows-msvc
+            archive: zip
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install Linux build deps
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libxkbcommon-dev libxcb1-dev \
+            libgl1-mesa-dev libwayland-dev pkg-config
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+
+      - name: Build release binary
+        run: cargo build --release --locked --target ${{ matrix.target }}
+
+      # Asset name includes the target triple so `self_update` can
+      # auto-detect the right artifact at update time.
+      - name: Stage artifact (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          mkdir -p dist
+          strip target/${{ matrix.target }}/release/rsexile
+          tar -C target/${{ matrix.target }}/release -czf \
+            dist/${{ matrix.asset }}.${{ matrix.archive }} rsexile
+          (cd dist && sha256sum ${{ matrix.asset }}.${{ matrix.archive }} \
+            > ${{ matrix.asset }}.${{ matrix.archive }}.sha256)
+
+      # No strip: MSVC emits debug info into a separate .pdb, so the .exe is
+      # already lean. Compress-Archive puts a bare rsexile.exe at the zip root,
+      # matching the Linux tarball layout. The .sha256 mirrors sha256sum's
+      # "<hash>  <filename>" format so existing verification tooling works.
+      - name: Stage artifact (Windows)
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          $src = "target/${{ matrix.target }}/release/rsexile.exe"
+          $zip = "dist/${{ matrix.asset }}.${{ matrix.archive }}"
+          Compress-Archive -Path $src -DestinationPath $zip
+          $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower()
+          "$hash  $(Split-Path $zip -Leaf)" | Out-File -Encoding ascii "$zip.sha256"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/${{ matrix.asset }}.${{ matrix.archive }}
+            dist/${{ matrix.asset }}.${{ matrix.archive }}.sha256
+          generate_release_notes: true
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

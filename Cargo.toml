@@ -1,0 +1,42 @@
+[package]
+name = "rsexile"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.102"
+clap = { version = "4.6.1", features = ["derive"] }
+dirs = "6.0.0"
+# dunce::canonicalize avoids std::fs::canonicalize's `\\?\` (verbatim UNC)
+# prefix on Windows, which would otherwise break notify's event-path equality
+# check in log_watcher. No-op on Linux.
+dunce = "1"
+egui = "0.34.3"
+notify = "8.2.0"
+regex = "1.11.1"
+self_update = { version = "0.42", default-features = false, features = [
+    "rustls",
+    "compression-flate2",
+    "archive-tar",
+    # archive-zip lets the Windows updater unpack `.zip` release assets.
+    "archive-zip",
+] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+
+# On Linux/X11 we unconditionally force the X11 backend (see
+# overlay::viewport_options) and need a direct winit dep to call
+# EventLoopBuilderExtX11::with_x11() — Wayland doesn't let clients set their
+# own window position (drag-to-move), and we route through XWayland anyway.
+# The cfg matches the one guarding that code so the dep is present exactly
+# where it's used. winit is pinned to the version eframe 0.34 already uses
+# to avoid duplicate winit crates.
+[target.'cfg(all(unix, not(target_os = "macos")))'.dependencies]
+eframe = { version = "0.34.3", default-features = false, features = ["default_fonts", "glow", "x11"] }
+winit = { version = "0.30", features = ["x11"], default-features = false }
+
+# Everywhere else (Windows, macOS) eframe uses its native winit backend; the
+# x11 feature is unix-only and would fail to compile, so drop it. No direct
+# winit dep is needed since we don't force a backend off Linux.
+[target.'cfg(not(all(unix, not(target_os = "macos"))))'.dependencies]
+eframe = { version = "0.34.3", default-features = false, features = ["default_fonts", "glow"] }

@@ -1,0 +1,39 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+        args: [--allow-multiple-documents]
+        exclude: '(^|.*/)(charts/.*/templates|services/.*/chart/templates)/.*\.ya?ml$'
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: cargo-fmt
+        name: cargo fmt
+        entry: cargo fmt --all -- --check
+        language: system
+        pass_filenames: false
+        files: '(\.rs$|rustfmt\.toml$)'
+
+      - id: cargo-clippy
+        name: cargo clippy
+        entry: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+        language: system
+        pass_filenames: false
+        files: '(\.rs$|Cargo\.toml$|Cargo\.lock$|clippy\.toml$|rust-toolchain\.toml$|data/.*\.json$)'
+
+      - id: cargo-check
+        name: cargo check
+        entry: cargo check --workspace --all-targets --all-features --locked
+        language: system
+        pass_filenames: false
+        files: '(\.rs$|Cargo\.toml$|Cargo\.lock$|rust-toolchain\.toml$|data/.*\.json$)'
+
+      - id: cargo-test
+        name: cargo test
+        entry: cargo test --workspace --all-features --locked
+        language: system
+        pass_filenames: false
+        files: '(\.rs$|Cargo\.toml$|Cargo\.lock$|rust-toolchain\.toml$|data/.*\.json$)'

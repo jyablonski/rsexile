@@ -1,0 +1,35 @@
+{
+  "acts": [
+    {
+      "act": "Custom Notes",
+      "zones": [
+        {
+          "zone": "Clearfell",
+          "next_zone": "The Grelwood",
+          "tasks": [
+            {
+              "description": "My route note: check this zone only if I need an early weapon upgrade",
+              "reward": "Personal note",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Grelwood",
+              "reward": "",
+              "optional": false
+            }
+          ]
+        },
+        {
+          "zone": "My Custom Zone",
+          "tasks": [
+            {
+              "description": "This zone does not exist in the default guide, but local-only entries are allowed",
+              "reward": "",
+              "optional": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

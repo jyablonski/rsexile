@@ -1,0 +1,1423 @@
+{
+  "acts": [
+    {
+      "act": "Act 1",
+      "zones": [
+        {
+          "zone": "The Riverbank",
+          "tasks": [
+            {
+              "description": "Defeat Bloated Miller",
+              "reward": "Unlocks Clearfell Encampment",
+              "optional": false
+            }
+          ],
+          "next_zone": "Clearfell"
+        },
+        {
+          "zone": "Clearfell",
+          "tasks": [
+            {
+              "description": "Defeat Beira of the Rotten Pack",
+              "reward": "+10% Cold Resistance",
+              "optional": false
+            },
+            {
+              "description": "Loot the Abandoned Stash",
+              "reward": "Uncut Skill Gem",
+              "optional": true
+            },
+            {
+              "description": "Continue to Mud Burrow",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Mud Burrow"
+        },
+        {
+          "zone": "Mud Burrow",
+          "tasks": [
+            {
+              "description": "Defeat The Devourer",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Return to Renly for the quest reward",
+              "reward": "Gold",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Grelwood",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Grelwood"
+        },
+        {
+          "zone": "The Grelwood",
+          "tasks": [
+            {
+              "description": "Find the Tree of Souls",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat Brambleghast",
+              "reward": "Uncut Skill Gem",
+              "optional": true
+            },
+            {
+              "description": "Defeat Areagne and activate the cauldron",
+              "reward": "Uncut Support Gem + Flask Upgrades",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Red Vale",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Red Vale"
+        },
+        {
+          "zone": "The Red Vale",
+          "tasks": [
+            {
+              "description": "Find all three Obelisks of Rust",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat The Rust King",
+              "reward": "Runed Girdle",
+              "optional": false
+            },
+            {
+              "description": "Loot Redblade weapon racks",
+              "reward": "Weapon Upgrade",
+              "optional": true
+            },
+            {
+              "description": "Return to Renly for Runed Spikes",
+              "reward": "Runed Spikes",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Grim Tangle"
+        },
+        {
+          "zone": "The Grim Tangle",
+          "tasks": [
+            {
+              "description": "Use Runed Spikes at the Tree of Souls",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat The Rotten Druid",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Continue to Cemetery of the Eternals",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Cemetery of the Eternals"
+        },
+        {
+          "zone": "Cemetery of the Eternals",
+          "tasks": [
+            {
+              "description": "Open the Memorial Gate after collecting both key pieces",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Disturb the Ancient Ruins grave",
+              "reward": "Random Ring",
+              "optional": true
+            },
+            {
+              "description": "Defeat Lachlann of Endless Lament",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Collect both memorial key pieces before opening the Memorial Gate",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Tomb of the Consort"
+        },
+        {
+          "zone": "Tomb of the Consort",
+          "tasks": [
+            {
+              "description": "Defeat Asinia, Praetor's Consort",
+              "reward": "Memorial Key Piece",
+              "optional": false
+            },
+            {
+              "description": "Open the Embattled Trove",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Return to Cemetery of the Eternals",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Mausoleum of the Praetor"
+        },
+        {
+          "zone": "Mausoleum of the Praetor",
+          "tasks": [
+            {
+              "description": "Defeat Draven, the Eternal Praetor",
+              "reward": "Memorial Key Piece",
+              "optional": false
+            },
+            {
+              "description": "Open the hidden treasury",
+              "reward": "Gold + Rare Chests",
+              "optional": true
+            },
+            {
+              "description": "Return to Cemetery of the Eternals",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Hunting Grounds"
+        },
+        {
+          "zone": "Hunting Grounds",
+          "tasks": [
+            {
+              "description": "Defeat The Crowbell",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Loot Una's cache near Crowbell",
+              "reward": "Item Rewards",
+              "optional": true
+            },
+            {
+              "description": "Complete the Dryadic Ritual",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Continue to Freythorn",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Freythorn"
+        },
+        {
+          "zone": "Freythorn",
+          "tasks": [
+            {
+              "description": "Cleanse all three Ritual Altars",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat The King in the Mist",
+              "reward": "+30 Spirit + Uncut Spirit Gem",
+              "optional": false
+            },
+            {
+              "description": "Return to the main route after King in the Mist",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Ogham Farmlands"
+        },
+        {
+          "zone": "Ogham Farmlands",
+          "tasks": [
+            {
+              "description": "Find Una's Hut and collect Una's Lute",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Clear the Crop Circle ambush",
+              "reward": "Uncut Skill Gem",
+              "optional": true
+            },
+            {
+              "description": "Continue to Ogham Village",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Ogham Village"
+        },
+        {
+          "zone": "Ogham Village",
+          "tasks": [
+            {
+              "description": "Defeat The Executioner",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Collect Renly's Smithing Tools",
+              "reward": "Unlocks Salvaging Bench",
+              "optional": false
+            },
+            {
+              "description": "Loot the Blacksmith Chest",
+              "reward": "Artificer's Orb + Rune",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Manor Ramparts",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Manor Ramparts"
+        },
+        {
+          "zone": "The Manor Ramparts",
+          "tasks": [
+            {
+              "description": "Cut down the hanged man at The Gallows",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Return to town and talk to the NPCs",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Continue to Ogham Manor",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Ogham Manor"
+        },
+        {
+          "zone": "Ogham Manor",
+          "tasks": [
+            {
+              "description": "Defeat Candlemass, The Living Rite",
+              "reward": "+20 Maximum Life",
+              "optional": false
+            },
+            {
+              "description": "Navigate to the third floor",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat Count Geonor",
+              "reward": "Unlocks Act 2",
+              "optional": false
+            }
+          ],
+          "next_zone": "Vastiri Outskirts"
+        }
+      ]
+    },
+    {
+      "act": "Act 2",
+      "zones": [
+        {
+          "zone": "Vastiri Outskirts",
+          "tasks": [
+            {
+              "description": "Defeat Rathbreaker",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Open the Devastated Camp chest",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Continue to Mawdun Quarry",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Mawdun Quarry"
+        },
+        {
+          "zone": "Mawdun Quarry",
+          "tasks": [
+            {
+              "description": "Clear through the quarry",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Loot the Abandoned Rhoa nest",
+              "reward": "Artificer's Orb",
+              "optional": true
+            },
+            {
+              "description": "Continue to Mawdun Mine",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Mawdun Mine"
+        },
+        {
+          "zone": "Mawdun Mine",
+          "tasks": [
+            {
+              "description": "Defeat Rudja, the Dread Engineer",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Traitor's Passage",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Traitor's Passage"
+        },
+        {
+          "zone": "Traitor's Passage",
+          "tasks": [
+            {
+              "description": "Defeat Balbala, the Traitor",
+              "reward": "Barya for Trial of the Sekhemas",
+              "optional": true
+            },
+            {
+              "description": "Ring the Ancient Seal and open the sealed passage",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Open the bell chest",
+              "reward": "Uncut Skill Gem",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Halani Gates",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Trial of the Sekhemas"
+        },
+        {
+          "zone": "Trial of the Sekhemas",
+          "tasks": [
+            {
+              "description": "Complete the trial if ready",
+              "reward": "Ascendancy Points",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Halani Gates"
+        },
+        {
+          "zone": "The Halani Gates",
+          "tasks": [
+            {
+              "description": "Defeat Jamanra's forces at the gate",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Keth",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Keth"
+        },
+        {
+          "zone": "Keth",
+          "tasks": [
+            {
+              "description": "Defeat Kabala, Constrictor Queen",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Find the Kabala Clan Relic if it drops here",
+              "reward": "Enables Ancient Vows choice",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Lost City",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Lost City"
+        },
+        {
+          "zone": "The Lost City",
+          "tasks": [
+            {
+              "description": "Find the Buried Shrines entrance",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Find the Kabala Clan Relic if not found earlier",
+              "reward": "Enables Ancient Vows choice",
+              "optional": true
+            },
+            {
+              "description": "Continue to Buried Shrines",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Buried Shrines"
+        },
+        {
+          "zone": "Buried Shrines",
+          "tasks": [
+            {
+              "description": "Collect an Elemental Shrine reward",
+              "reward": "Resistance Ring + Matching Rune",
+              "optional": true
+            },
+            {
+              "description": "Find the Kabala Clan Relic if not found earlier",
+              "reward": "Enables Ancient Vows choice",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Mastodon Badlands"
+        },
+        {
+          "zone": "Mastodon Badlands",
+          "tasks": [
+            {
+              "description": "Find the Bone Pits entrance",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Bone Pits",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Bone Pits"
+        },
+        {
+          "zone": "The Bone Pits",
+          "tasks": [
+            {
+              "description": "Defeat The Mastodon",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Collect the Sun Clan Relic",
+              "reward": "Enables Ancient Vows choice",
+              "optional": true
+            },
+            {
+              "description": "Continue to Lightless Passage",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Lightless Passage"
+        },
+        {
+          "zone": "Lightless Passage",
+          "tasks": [
+            {
+              "description": "Continue through the Abyss area",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Check for optional Abyss objective; reward details may vary",
+              "reward": "",
+              "optional": true
+            }
+          ],
+          "next_zone": "The Well of Souls"
+        },
+        {
+          "zone": "The Well of Souls",
+          "tasks": [
+            {
+              "description": "Clear the Abyss encounter",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Return to the caravan route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Valley of the Titans"
+        },
+        {
+          "zone": "Valley of the Titans",
+          "tasks": [
+            {
+              "description": "Place both clan relics at the altar",
+              "reward": "+1 Charm Slot + Charm Bonus Choice",
+              "optional": true
+            },
+            {
+              "description": "Choose a swappable Ancient Vows bonus",
+              "reward": "30% Charm Charges OR 30% Charm Duration",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Titan Grotto",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Titan Grotto"
+        },
+        {
+          "zone": "The Titan Grotto",
+          "tasks": [
+            {
+              "description": "Defeat Zalmarath, the Colossus",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Return to the caravan route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Deshar"
+        },
+        {
+          "zone": "Deshar",
+          "tasks": [
+            {
+              "description": "Find the Final Letter",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Deliver the Final Letter to Shambrin",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Farm Watchful Twins for a higher-level Barya if needed",
+              "reward": "Barya",
+              "optional": true
+            },
+            {
+              "description": "Continue to Path of Mourning",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Path of Mourning"
+        },
+        {
+          "zone": "Path of Mourning",
+          "tasks": [
+            {
+              "description": "Continue through the area",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Spires of Deshar",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Spires of Deshar"
+        },
+        {
+          "zone": "The Spires of Deshar",
+          "tasks": [
+            {
+              "description": "Activate the Sisters of Garukhan Shrine",
+              "reward": "+10% Lightning Resistance",
+              "optional": false
+            },
+            {
+              "description": "Return to The Ardura Caravan and talk to the NPCs",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Dreadnought",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Dreadnought"
+        },
+        {
+          "zone": "The Dreadnought",
+          "tasks": [
+            {
+              "description": "Fight across the moving caravan",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Dreadnought Vanguard",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Dreadnought Vanguard"
+        },
+        {
+          "zone": "Dreadnought Vanguard",
+          "tasks": [
+            {
+              "description": "Defeat Jamanra, the Abomination",
+              "reward": "Unlocks Act 3",
+              "optional": false
+            }
+          ],
+          "next_zone": "Sandswept Marsh"
+        }
+      ]
+    },
+    {
+      "act": "Act 3",
+      "zones": [
+        {
+          "zone": "Sandswept Marsh",
+          "tasks": [
+            {
+              "description": "Defeat Rootdredge",
+              "reward": "Uncut Skill Gem",
+              "optional": true
+            },
+            {
+              "description": "Loot the Orok Campfire basket",
+              "reward": "Lesser Jeweller's Orb",
+              "optional": true
+            },
+            {
+              "description": "Continue to Jungle Ruins",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Jungle Ruins"
+        },
+        {
+          "zone": "Jungle Ruins",
+          "tasks": [
+            {
+              "description": "Defeat Mighty Silverfist",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Loot the Jungle Grave",
+              "reward": "Rare Belt",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Venom Crypts",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Venom Crypts"
+        },
+        {
+          "zone": "The Venom Crypts",
+          "tasks": [
+            {
+              "description": "Collect Venom Vial in The Venom Crypts",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Deliver Venom Vial to Servi and choose one permanent bonus",
+              "reward": "25% Stun Threshold OR 30% Elemental Ailment Threshold OR 25% Mana Regeneration Rate",
+              "optional": false
+            },
+            {
+              "description": "Return to the main route after the Venom Vial reward",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Infested Barrens"
+        },
+        {
+          "zone": "Infested Barrens",
+          "tasks": [
+            {
+              "description": "Find the Azak Bog entrance",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Loot the Tribal Medicine Chest",
+              "reward": "Rare Ring",
+              "optional": true
+            },
+            {
+              "description": "Continue to The Azak Bog",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Azak Bog"
+        },
+        {
+          "zone": "The Azak Bog",
+          "tasks": [
+            {
+              "description": "Defeat Ignagduk, The Bog Witch",
+              "reward": "+30 Spirit + Uncut Spirit Gem",
+              "optional": false
+            },
+            {
+              "description": "Complete the Flame Ritual",
+              "reward": "Experience",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route after Ignagduk",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Chimeral Wetlands"
+        },
+        {
+          "zone": "Chimeral Wetlands",
+          "tasks": [
+            {
+              "description": "Defeat Xyclucian, the Chimera",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Jiquani's Machinarium",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Temple of Chaos"
+        },
+        {
+          "zone": "The Temple of Chaos",
+          "tasks": [
+            {
+              "description": "Complete the trial if ready",
+              "reward": "Ascendancy Points",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route after the trial",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Jiquani's Machinarium"
+        },
+        {
+          "zone": "Jiquani's Machinarium",
+          "tasks": [
+            {
+              "description": "Find the Small Soul Core",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Deliver Small Soul Core to the altar, then defeat Blackjaw, The Remnant",
+              "reward": "+10% Fire Resistance",
+              "optional": false
+            },
+            {
+              "description": "Continue to Jiquani's Sanctum",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Jiquani's Sanctum"
+        },
+        {
+          "zone": "Jiquani's Sanctum",
+          "tasks": [
+            {
+              "description": "Defeat Zicoatl, Warden of the Core",
+              "reward": "Large Soul Core",
+              "optional": false
+            },
+            {
+              "description": "Use the Large Soul Core to raise the Matlan Waterways",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Matlan Waterways"
+        },
+        {
+          "zone": "The Matlan Waterways",
+          "tasks": [
+            {
+              "description": "Navigate the canals",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Drowned City",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Drowned City"
+        },
+        {
+          "zone": "The Drowned City",
+          "tasks": [
+            {
+              "description": "Defeat The Queen of Filth",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Molten Vault",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Molten Vault"
+        },
+        {
+          "zone": "The Molten Vault",
+          "tasks": [
+            {
+              "description": "Defeat Mektul, The Forgemaster",
+              "reward": "Unlocks Reforging Bench",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route after Mektul",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Apex of Filth"
+        },
+        {
+          "zone": "Apex of Filth",
+          "tasks": [
+            {
+              "description": "Use the Apex of Filth to enter the past",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Temple of Kopec",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Temple of Kopec"
+        },
+        {
+          "zone": "Temple of Kopec",
+          "tasks": [
+            {
+              "description": "Defeat Ketzuli, High Priest of the Sun",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Utzaal",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Utzaal"
+        },
+        {
+          "zone": "Utzaal",
+          "tasks": [
+            {
+              "description": "Push toward Aggorat",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Collect the Sacrificial Heart if it drops here",
+              "reward": "+2 Passive Skill Points",
+              "optional": true
+            },
+            {
+              "description": "Continue to Aggorat",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Aggorat"
+        },
+        {
+          "zone": "Aggorat",
+          "tasks": [
+            {
+              "description": "Collect the Sacrificial Heart if not found earlier",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Sacrifice the Sacrificial Heart at the altar",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Defeat Viper Napuatzi",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Black Chambers",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Black Chambers"
+        },
+        {
+          "zone": "The Black Chambers",
+          "tasks": [
+            {
+              "description": "Defeat Doryani",
+              "reward": "Unlocks Act 4",
+              "optional": false
+            }
+          ],
+          "next_zone": "Isle of Kin"
+        }
+      ]
+    },
+    {
+      "act": "Act 4",
+      "zones": [
+        {
+          "zone": "Isle of Kin",
+          "tasks": [
+            {
+              "description": "Find the Volcanic Warrens entrance",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat The Blind Beast",
+              "reward": "Greater Blank Runes",
+              "optional": true
+            },
+            {
+              "description": "Open the Beast Pen",
+              "reward": "Uncut Support Gem",
+              "optional": true
+            },
+            {
+              "description": "Collect the Torn Map Piece from the Flayed Sailor",
+              "reward": "Progress toward Plunder's Point",
+              "optional": true
+            }
+          ],
+          "next_zone": "Volcanic Warrens"
+        },
+        {
+          "zone": "Volcanic Warrens",
+          "tasks": [
+            {
+              "description": "Defeat Krutog, Lord of Kin",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Free Matiki",
+              "reward": "Unlocks Eye of Hinekora route",
+              "optional": false
+            },
+            {
+              "description": "Loot the Volcanic Nest",
+              "reward": "Resistance Ring",
+              "optional": true
+            },
+            {
+              "description": "Continue to Kedge Bay",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Kedge Bay"
+        },
+        {
+          "zone": "Kedge Bay",
+          "tasks": [
+            {
+              "description": "Cross the coastline toward Journey's End",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Collect the Torn Map Piece from Dead Man's Chest",
+              "reward": "Progress toward Plunder's Point",
+              "optional": true
+            },
+            {
+              "description": "Loot the Abandoned Ship",
+              "reward": "Lesser Jeweller's Orb",
+              "optional": true
+            },
+            {
+              "description": "Continue to Journey's End",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Journey's End"
+        },
+        {
+          "zone": "Journey's End",
+          "tasks": [
+            {
+              "description": "Defeat Captain Hartlin",
+              "reward": "Verisium",
+              "optional": false
+            },
+            {
+              "description": "Return Verisium to Dannig",
+              "reward": "Verisium Spikes",
+              "optional": false
+            },
+            {
+              "description": "Use Verisium Spikes at the Karui Totems",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat Omniphobia",
+              "reward": "+2 Passive Skill Points + Uncut Skill Gem",
+              "optional": false
+            }
+          ],
+          "next_zone": "Abandoned Prison"
+        },
+        {
+          "zone": "Abandoned Prison",
+          "tasks": [
+            {
+              "description": "Find the Solitary Confinement entrance",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Recover the Chapel Key",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Activate the Goddess of Justice altar",
+              "reward": "30% Life Flask Recovery OR 30% Mana Flask Recovery",
+              "optional": false
+            },
+            {
+              "description": "Continue to Solitary Confinement",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Solitary Confinement"
+        },
+        {
+          "zone": "Solitary Confinement",
+          "tasks": [
+            {
+              "description": "Defeat The Prisoner",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Return to the main route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Eye of Hinekora"
+        },
+        {
+          "zone": "Eye of Hinekora",
+          "tasks": [
+            {
+              "description": "Speak to Navali",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Pay respects at Navali's Rest",
+              "reward": "+5% Maximum Mana",
+              "optional": false
+            },
+            {
+              "description": "Continue to Halls of the Dead",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Halls of the Dead"
+        },
+        {
+          "zone": "Halls of the Dead",
+          "tasks": [
+            {
+              "description": "Complete Tawhoa's Test",
+              "reward": "+5 Dexterity OR +5% Lightning Resistance",
+              "optional": false
+            },
+            {
+              "description": "Complete Tasalio's Test",
+              "reward": "+5 Intelligence OR +5% Cold Resistance",
+              "optional": false
+            },
+            {
+              "description": "Complete Ngamahu's Test",
+              "reward": "+5 Strength OR +5% Fire Resistance",
+              "optional": false
+            },
+            {
+              "description": "Continue to Trial of the Ancestors",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Trial of the Ancestors"
+        },
+        {
+          "zone": "Trial of the Ancestors",
+          "tasks": [
+            {
+              "description": "Defeat Yama the White",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Speak to Navali",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Return to the main route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Whakapanu Island"
+        },
+        {
+          "zone": "Whakapanu Island",
+          "tasks": [
+            {
+              "description": "Find the Singing Caverns entrance",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat The Great White One",
+              "reward": "Shark Fin",
+              "optional": true
+            },
+            {
+              "description": "Deliver Shark Fin to Kaimana",
+              "reward": "Uncut Skill Gem OR Uncut Spirit Gem OR Uncut Support Gem",
+              "optional": false
+            },
+            {
+              "description": "Collect the Torn Map Piece from the Petrified Pirate",
+              "reward": "Progress toward Plunder's Point",
+              "optional": true
+            }
+          ],
+          "next_zone": "Singing Caverns"
+        },
+        {
+          "zone": "Singing Caverns",
+          "tasks": [
+            {
+              "description": "Defeat Diamora, Song of Death",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Place the Humming Pearl in the Beckoning Clam",
+              "reward": "Rare Pearlescent Amulet",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Shrike Island"
+        },
+        {
+          "zone": "Shrike Island",
+          "tasks": [
+            {
+              "description": "Defeat Scourge of the Skies",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Collect the Torn Map Piece from the Corpse Nest",
+              "reward": "Unlocks Plunder's Point if all map pieces are found",
+              "optional": true
+            },
+            {
+              "description": "Continue to Arastas",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Plunder's Point"
+        },
+        {
+          "zone": "Plunder's Point",
+          "tasks": [
+            {
+              "description": "Enter if all Torn Map Pieces are collected",
+              "reward": "",
+              "optional": true
+            },
+            {
+              "description": "Complete the optional Expedition encounter",
+              "reward": "Loot",
+              "optional": true
+            },
+            {
+              "description": "Return to the main route",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Arastas"
+        },
+        {
+          "zone": "Arastas",
+          "tasks": [
+            {
+              "description": "Speak to Lorandis and break the barrier",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Ring the Golden Bells",
+              "reward": "Regal Orbs + Exalted Orbs",
+              "optional": true
+            },
+            {
+              "description": "Defeat Torvian, Hand of the Saviour",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Excavation",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Excavation"
+        },
+        {
+          "zone": "The Excavation",
+          "tasks": [
+            {
+              "description": "Defeat Benedictus",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Follow Tavakai and Makoru",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Return and sail to Ngakanu",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Ngakanu"
+        },
+        {
+          "zone": "Ngakanu",
+          "tasks": [
+            {
+              "description": "Battle through the village",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Loot the Meeting House secret chest",
+              "reward": "Loot",
+              "optional": true
+            },
+            {
+              "description": "Continue to Heart of the Tribe",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Heart of the Tribe"
+        },
+        {
+          "zone": "Heart of the Tribe",
+          "tasks": [
+            {
+              "description": "Defeat Tavakai",
+              "reward": "Completes Act 4",
+              "optional": false
+            }
+          ],
+          "next_zone": null
+        }
+      ]
+    }
+  ]
+}
