@@ -496,9 +496,9 @@ mod tests {
 
     #[test]
     fn last_zone_has_no_next() {
-        // Heart of the Tribe is the final zone in Act 4 with no explicit
-        // next_zone and no following zone in its act.
-        assert!(require("Heart of the Tribe").next_zone.is_none());
+        // The final interlude zone has no explicit next_zone and no following
+        // zone in its act.
+        assert!(require("The Cuachic Vault").next_zone.is_none());
     }
 
     /// Minimal scoped temp directory that cleans up on drop. Avoids pulling

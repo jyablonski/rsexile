@@ -1264,7 +1264,7 @@
             },
             {
               "description": "Deliver Shark Fin to Kaimana",
-              "reward": "Uncut Skill Gem OR Uncut Spirit Gem OR Uncut Support Gem",
+              "reward": "Permanent bonus, don't skip; Uncut Skill Gem OR Uncut Spirit Gem OR Uncut Support Gem",
               "optional": false
             },
             {
@@ -1279,7 +1279,7 @@
           "zone": "Singing Caverns",
           "tasks": [
             {
-              "description": "Defeat Diamora, Song of Death",
+              "description": "Defeat Diamora, Song of Death. Return to ship after to unlock the next zone",
               "reward": "",
               "optional": false
             },
@@ -1412,6 +1412,350 @@
             {
               "description": "Defeat Tavakai",
               "reward": "Completes Act 4",
+              "optional": false
+            },
+            {
+              "description": "Talk to The Hooded One in Kingsmarch and choose an interlude route",
+              "reward": "Unlocks Ogham, Vastiri, and Mount Kriar interludes",
+              "optional": false
+            }
+          ],
+          "next_zone": "Scorched Farmlands"
+        }
+      ]
+    },
+    {
+      "act": "Interlude: The Curse of Holten",
+      "zones": [
+        {
+          "zone": "Scorched Farmlands",
+          "tasks": [
+            {
+              "description": "Defeat Isolde of the White Shroud and Heldra of the Black Pyre",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Visit Stones of Serle before following the darkness into The Blackwood",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Stones of Serle"
+        },
+        {
+          "zone": "Stones of Serle",
+          "tasks": [
+            {
+              "description": "Activate all Runed Megaliths",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat Siora, Blade of the Mists",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Talk to Una and return to Scorched Farmlands",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Blackwood"
+        },
+        {
+          "zone": "The Blackwood",
+          "tasks": [
+            {
+              "description": "Follow the route through the darkness",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Holten",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Holten"
+        },
+        {
+          "zone": "Holten",
+          "tasks": [
+            {
+              "description": "Defeat Sigbert of the Sullied Oath and Godwin of the Shattered Creed",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Detour through Wolvenhold before Holten Estate",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Wolvenhold"
+        },
+        {
+          "zone": "Wolvenhold",
+          "tasks": [
+            {
+              "description": "Defeat Oswin, the Dread Warden",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Return to Holten and continue to Holten Estate",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Holten Estate"
+        },
+        {
+          "zone": "Holten Estate",
+          "tasks": [
+            {
+              "description": "Go upstairs, then downstairs through the estate",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Defeat Thane Wulfric and Lady Elswyth",
+              "reward": "Recruit the Ezomytes",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Khari Crossing"
+        }
+      ]
+    },
+    {
+      "act": "Interlude: The Stolen Barya",
+      "zones": [
+        {
+          "zone": "The Khari Crossing",
+          "tasks": [
+            {
+              "description": "Defeat Akthi, the Final Sting and Anundr, the Sandworm",
+              "reward": "+2 Passive Skill Points from Risu",
+              "optional": false
+            },
+            {
+              "description": "Take Molten One's Gift from Skullmaw Stairway",
+              "reward": "+5% Maximum Life",
+              "optional": false
+            },
+            {
+              "description": "Continue to Pools of Khatal",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Pools of Khatal"
+        },
+        {
+          "zone": "Pools of Khatal",
+          "tasks": [
+            {
+              "description": "Tag the waypoint",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Sel Khari Sanctuary",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Sel Khari Sanctuary"
+        },
+        {
+          "zone": "Sel Khari Sanctuary",
+          "tasks": [
+            {
+              "description": "Defeat Elzarah, the Cobra Lord",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Talk to Asala and return to Khari Crossing",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Galai Gates"
+        },
+        {
+          "zone": "The Galai Gates",
+          "tasks": [
+            {
+              "description": "Defeat Vornas, the Fell Flame",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Qimah",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Qimah"
+        },
+        {
+          "zone": "Qimah",
+          "tasks": [
+            {
+              "description": "Activate the Seven Pillars",
+              "reward": "Choose a swappable pillar bonus",
+              "optional": false
+            },
+            {
+              "description": "Summon Jado and continue to Qimah Reservoir",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Qimah Reservoir"
+        },
+        {
+          "zone": "Qimah Reservoir",
+          "tasks": [
+            {
+              "description": "Defeat Azmadi, the Faridun Prince",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Activate the Grand Barya and talk to Jado",
+              "reward": "Recruit the Maraketh",
+              "optional": false
+            }
+          ],
+          "next_zone": "Ashen Forest"
+        }
+      ]
+    },
+    {
+      "act": "Interlude: Doryani's Contingency",
+      "zones": [
+        {
+          "zone": "Ashen Forest",
+          "tasks": [
+            {
+              "description": "Follow the route toward Kriar Village",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Kriar Village",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Kriar Village"
+        },
+        {
+          "zone": "Kriar Village",
+          "tasks": [
+            {
+              "description": "Defeat Lythara, the Wayward Spear",
+              "reward": "+40 Spirit",
+              "optional": false
+            },
+            {
+              "description": "Continue to Glacial Tarn",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Glacial Tarn"
+        },
+        {
+          "zone": "Glacial Tarn",
+          "tasks": [
+            {
+              "description": "Tag the waypoint",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Detour to Howling Caves",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "After Howling Caves, return here and defeat Rakkar, the Frozen Talon",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Howling Caves"
+        },
+        {
+          "zone": "Howling Caves",
+          "tasks": [
+            {
+              "description": "Defeat The Abominable Yeti",
+              "reward": "Icy Tusks",
+              "optional": false
+            },
+            {
+              "description": "Give Icy Tusks to Hilda",
+              "reward": "+2 Passive Skill Points",
+              "optional": false
+            },
+            {
+              "description": "Return to Glacial Tarn and continue to Kriar Peaks",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Kriar Peaks"
+        },
+        {
+          "zone": "Kriar Peaks",
+          "tasks": [
+            {
+              "description": "Take Elder Madox's gift",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to Etched Ravine",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "Etched Ravine"
+        },
+        {
+          "zone": "Etched Ravine",
+          "tasks": [
+            {
+              "description": "Defeat Stormgore, the Guardian",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Continue to The Cuachic Vault",
+              "reward": "",
+              "optional": false
+            }
+          ],
+          "next_zone": "The Cuachic Vault"
+        },
+        {
+          "zone": "The Cuachic Vault",
+          "tasks": [
+            {
+              "description": "Defeat Zelina, Blood Priestess and Zolin, Blood Priest",
+              "reward": "",
+              "optional": false
+            },
+            {
+              "description": "Summon Doryani, then return to Kingsmarch and talk to The Hooded One",
+              "reward": "+2 Passive Skill Points after all interludes are complete",
               "optional": false
             }
           ],
