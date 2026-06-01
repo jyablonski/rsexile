@@ -4,6 +4,8 @@
 
 A Path of Exile 2 in-game campaign-guide overlay for Linux and Windows. As you play, rsexile follows your zone transitions and shows what to do, what to skip, and what rewards to look for in the current zone.
 
+![rsexile overlay showing zone tasks while playing Path of Exile 2](docs/rsexile-overlay.png)
+
 ## What it does
 
 - Tails PoE2's `Client.txt` log file and listens for zone-change events.
